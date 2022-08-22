@@ -128,7 +128,7 @@ ans.addEventListener('click', ()=>{
             output.innerHTML = "Aukat mai raha kar...."  
         }
     else
-    output.innerHTML = "faltu calculator";}
+    output.innerHTML = eval(input.innerHTML);}
     catch(err)
     {
         output.innerHTML = "Error";
