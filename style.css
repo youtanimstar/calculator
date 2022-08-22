@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --background-color: #1a1a40;
+  --calculator-color: #270082;
+  --screen-color: #ffabdc;
+  --button-color-primary: #fa58b6;
+  --button-color-secondary: #7a0bc0;
+  --button-color-hover: #270082;
+  --text-color: #fff;
+}
+
+/* button-area */
+
+.button {
+  padding: 0.2rem 2.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-color: rgba(115, 115, 115, 0.128);
+  color: var(--text-color);
+  font-weight: 800;
+  border: 1px solid rgba(235, 235, 235, 0.5);
+
+  transition: all 0.2s linear;
+  margin: 1px;
+  cursor: pointer;
+}
+.button:hover,
+.button:active {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.num-button {
+  background-color: rgba(88, 88, 88, 0.67);
+}
+
+.num-button:hover,
+.num-button:active {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #161623;
+  flex-direction: column;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f00, rgba(255, 0, 255, 0.121));
+  clip-path: circle(30% at right 70%);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#2195f361, #e91e63);
+  clip-path: circle(20% at 10% 10%);
+}
+
+.container {
+  /* position: relative; */
+  max-width: 60rem;
+  min-height: 35rem;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(235, 235, 235, 0.1);
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(235, 235, 235, 0.5);
+  border-left: 1px solid rgba(235, 235, 235, 0.5);
+  backdrop-filter: blur(30px);
+  z-index: 1;
+}
+
+.calculator {
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.screen {
+  width: 90%;
+  height: 8rem;
+  border-radius: 15px;
+  border-top: 1px solid rgba(235, 235, 235, 0.5);
+  border-left: 1px solid rgba(235, 235, 235, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input-text {
+  width: 95%;
+  height: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--text-color);
+  font-size: 1.9rem;
+  padding: 1rem;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.output-text {
+  width: 95%;
+  height: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--text-color);
+  font-size: 3.5rem;
+  padding: 1rem;
+  font-weight: 400;
+  padding: 1rem;
+  overflow: hidden;
+}
+.controllers {
+  min-height: 20rem;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.numpad-1 {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .button {
+    padding: 0.2rem 1.2rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 338px) {
+  .numpad-1 .button {
+    padding: 0.2rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 280px) {
+  .numpad-1 .button {
+    padding: 0.2rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 790px) {
+  .output-text {
+    font-size: 2rem;
+  }
+  .input-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 498px) {
+  .output-text {
+    font-size: 1.5rem;
+  }
+}
+.footer {
+  color: #fff;
+  font-size: small;
+}
